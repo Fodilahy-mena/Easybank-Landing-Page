@@ -1,0 +1,56 @@
+@import 'variables';
+@import 'lato_regular_font';
+
+body {
+  font-family: myLatoRegular;
+  font-size: 16px;
+  font-weight: normal;
+  background-color: rgb(250, 250, 250);
+  display: block;
+  max-width: $percentage-max-width;
+  min-width: $auto;
+  max-height: $percentage-max-width;
+  min-height: $auto;
+  margin: 0;
+}
+body > [type="checkbox"] {
+  display: none;
+}
+
+nav > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding: $padding;
+}
+.request--invite a {
+  text-decoration: none;
+  padding: .8rem 1.8rem;
+  border-radius: 20px;
+  background-color: aquamarine;
+}
+body > main > header {
+  background: url(../img/bg_intro_mobile.svg);
+  background-repeat: no-repeat;
+  background-position-y: -120px;
+  -o-background-size:cover;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  background-size: cover;
+}
+@media (min-width: $max-width-container) {
+
+  body > main > header {
+    background: url(../img/bg_intro_desktop.svg), url(../img/image_mockups.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position-x: 685px, 844px;
+    background-position-y: -190px, -90px;
+    background-size: $percentage-max-width - 30, $percentage-max-width - 55;
+    background-blend-mode: overlay;
+  }
+}
+
+

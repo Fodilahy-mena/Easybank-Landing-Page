@@ -1,0 +1,19 @@
+$slightly-darkgray: #4F4F4F;
+$darkgray:  #333333;
+$centered: center;
+$max-width-container: 1114px;
+$percentage-max-width: 100%;
+$auto: auto;
+$font-size: 16px;
+$line-height: 23px;
+$padding: 21px;
+
+// About font
+$lato-font-path: "../fonts/any_conv.com__";
+$woff2: 'woff2';
+$woff: 'woff';
+
+@mixin reset-list {
+  margin: 0;
+  list-style: none;
+}

@@ -1,0 +1,34 @@
+/* Import all the css files here */
+/* The font css file is here */
+
+@import "lato_font_bold";
+
+/* The Lato regular font link is in here */
+
+@import "lato_regular_font";
+
+/* This is a link to default css */
+@import "default";
+// Link for site header
+@import 'site_header';
+/* This is a link to header css */
+@import "header";
+/* This is the link of bady nav */
+@import 'site_nav';
+/* This is a link to masthead css */
+@import "masthead";
+
+// This is the first section 'Get sterted'
+@import 'get_started';
+
+// Section features here
+
+@import 'features';
+
+// Section guide communication here
+
+@import 'guide_communication';
+
+// Footer link file
+
+@import 'footer';

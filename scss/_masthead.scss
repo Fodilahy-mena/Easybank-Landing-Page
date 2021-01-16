@@ -1,0 +1,23 @@
+@import 'variables';
+
+header h2 {
+  position: relative;
+  margin-top: 0;
+}
+.navigation__body {
+  padding-block-start: 2rem;
+}
+.description {
+  text-shadow: .4px .4px .25px rgba(255, 255, 255, 0.6);
+}
+
+@media (min-width: $max-width-container) {
+  .navigation__body {
+  justify-content: left;
+  padding-inline-start: 0;
+}
+.description {
+  text-shadow:unset;
+  margin-left: 0;
+}
+}

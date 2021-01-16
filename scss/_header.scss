@@ -1,0 +1,60 @@
+@import 'variables';
+
+.logo--sports--img {
+  max-width: 186px;
+  min-width: 186px;
+  min-height: 70px;
+  max-height: 70px;
+}
+
+.a11y {
+  text-align: $centered;
+  padding-block-end: 59px;
+}
+
+.a11y h1 {
+  margin: 0;
+  top: 30px;
+  position: relative;
+}
+.navigation {
+  position: relative;
+  position: relative;
+  padding-block-start: 330px;
+  background: url(../img/image_mockups.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: -126px;
+  -o-background-size:contain;
+  -webkit-background-size:contain;
+  -moz-background-size:contain;
+  background-size: contain;
+  background-blend-mode: overlay;
+
+}
+
+@media (min-width: $max-width-container) {
+  .a11y {
+    text-align: unset;
+    max-width: 1114px;
+    max-height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10rem;
+    padding-right: 8rem;
+    padding-left: 8rem;
+
+
+  }
+  .logo--sports--img {
+    max-width: 92px;
+    min-width: 92px;
+    min-height: 32px;
+    max-height: 32px;
+  }
+  .navigation {
+    max-width: 370px;
+    padding-block-start: 133px;
+    background: unset;
+  }
+}
