@@ -36,8 +36,13 @@
 
 @media (min-width: 1114px) {
   .heading {
-    font-size: 36px;
-    line-height: 48px; } }
+    font-size: 3rem;
+    line-height: 48px;
+    margin-bottom: .5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit; } }
 
 /* The Lato regular font link is in here */
 @font-face {
@@ -106,9 +111,11 @@ section {
 
 .request--invite a {
   text-decoration: none;
-  padding: .8rem 1.8rem;
-  border-radius: 20px;
-  background-color: aquamarine; }
+  padding: .8rem 2rem;
+  background-color: aquamarine;
+  background-image: linear-gradient(to right, #31d35c, #2bb7da);
+  border-radius: 100px;
+  color: white; }
 
 body > main > header {
   background: url(../img/bg_intro_mobile.svg);
@@ -123,9 +130,9 @@ body > main > header {
   body > main > header {
     background: url(../img/bg_intro_desktop.svg), url(../img/image_mockups.png);
     background-repeat: no-repeat, no-repeat;
-    background-position-x: 685px, 844px;
-    background-position-y: -190px, -90px;
-    background-size: 70%, 45%;
+    background-position-x: 592px, 753px;
+    background-position-y: -220px, -100px;
+    background-size: 85%, 50%;
     background-blend-mode: overlay; } }
 
 body > header {
@@ -221,16 +228,22 @@ body > nav {
   background-color: #f8f8f8;
   position: absolute;
   z-index: 3;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 250px;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-  transform: translateX(-110%);
-  transition: transform 0.3s; }
+  width: 90%;
+  height: auto;
+  transform: translateY(-1100);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  margin: auto;
+  background-color: white;
+  transition: translate 0.3s; }
 
 body > [type="checkbox"]:checked ~ nav {
-  transform: translateX(0); }
+  flex-basis: 100%;
+  text-align: center;
+  transform: translateY(2.3rem);
+  display: block;
+  top: 18px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  background-color: white; }
 
 body > [type="checkbox"]:checked ~ header label {
   position: absolute;
@@ -276,7 +289,7 @@ body > nav > ul a {
   line-height: 1rem;
   transition: opacity 0.3s;
   display: block;
-  padding: 1rem 1rem 1rem 4rem; }
+  padding: 1rem; }
 
 body > nav .active a {
   opacity: 1; }

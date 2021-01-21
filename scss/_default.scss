@@ -28,9 +28,11 @@ section {
 }
 .request--invite a {
   text-decoration: none;
-  padding: .8rem 1.8rem;
-  border-radius: 20px;
+  padding: .8rem 2rem;
   background-color: aquamarine;
+  background-image: linear-gradient( to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%) );
+  border-radius: 100px;
+  color: white;
 }
 body > main > header {
   background: url(../img/bg_intro_mobile.svg);
@@ -46,9 +48,9 @@ body > main > header {
   body > main > header {
     background: url(../img/bg_intro_desktop.svg), url(../img/image_mockups.png);
     background-repeat: no-repeat, no-repeat;
-    background-position-x: 685px, 844px;
-    background-position-y: -190px, -90px;
-    background-size: $percentage-max-width - 30, $percentage-max-width - 55;
+    background-position-x: 592px, 753px;
+    background-position-y: -220px, -100px;
+    background-size: $percentage-max-width - 15, $percentage-max-width - 50;
     background-blend-mode: overlay;
   }
 }

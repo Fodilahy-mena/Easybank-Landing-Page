@@ -3,17 +3,26 @@ body > nav {
   background-color: #f8f8f8;
   position: absolute;
   z-index: 3;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 250px;
-  box-shadow: 0 0 50px rgba(0,0,0,.5);
-  transform: translateX(-110%);
-  transition: transform 0.3s;
+  width: 90%;
+  height: auto;
+  transform: translateY(-1100);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  margin: auto;
+  background-color: white;
+  transition: translate 0.3s;
+  // display: none;
+
 }
 
 body > [type="checkbox"]:checked ~ nav {
-  transform: translateX(0);
+  // transform: translateX(0);
+  flex-basis: 100%;
+  text-align: center;
+  transform: translateY(2.3rem);
+  display: block;
+  top: 18px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  background-color: white;
 }
 
 body > [type="checkbox"]:checked ~ header label {
@@ -65,7 +74,7 @@ body > nav > ul a {
   line-height: 1rem;
   transition: opacity 0.3s;
   display: block;
-  padding: 1rem 1rem 1rem 4rem;
+  padding: 1rem;
 }
 
 body > nav .active a {
