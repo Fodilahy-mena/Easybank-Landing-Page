@@ -1,5 +1,9 @@
 @import 'variables';
-
+@import 'fonts';
+.section_articles {
+  padding-block-start: 50px;
+  padding-block-end: 50px;
+}
 .section_articles > article {
   display: flex;
   flex-direction: column;
@@ -28,16 +32,19 @@
 }
 
 .section_articles > article > header > h4 {
+  opacity: .6;
   margin: 0;
 }
 
 .section_articles > article > p {
+  opacity: .5;
   order: 2;
   margin-left: 1rem;
   margin-right: 1rem;
 }
 
 .article_description {
+  opacity: .5;
   order: 4;
   margin-left: 1rem;
   margin-right: 1rem;
@@ -48,8 +55,6 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto 1fr;
     grid-gap: 1rem;
-    padding-block-start: 50px;
-    padding-block-end: 171px;
     background-position: calc(50% + 300px);
     max-width: 1114px;
     margin: auto;
@@ -71,28 +76,28 @@
 }
 
 .section_started h3 {
-  font-family: myLatoBold;
+  font-family: PublicSansBold;
   font-size: 16px;
   line-height: 21px;
   color: #00ADEE;
   text-transform: uppercase;
 }
 .section_started h4 {
-  font-family: myLatoBold;
+  font-family: PublicSansBold;
   font-size: 28px;
   line-height: 37px;
   color: #333333;
 }
 
 .section_started p {
-  font-family: myLatoRegular;
+  font-family: PublicSansRegular;
   font-size: 18px;
   line-height: 23px;
   color: #4F4F4F;
 }
 .section_started__learn_more a {
   text-decoration: none;
-  font-family: Lato;
+  font-family: PublicSansBold;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;

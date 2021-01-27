@@ -1,0 +1,72 @@
+@import 'variables';
+
+@font-face {
+  font-family: PublicSansBold;
+  src: local('Public Sans Bold'),
+       local('public sans bold'),
+       local('PublicSansBold'),
+       local('public-sans-bold'),
+       url('#{$public-sans-font-path}_bold.#{$woff2}') format("#{$woff2}"),
+       url('#{$public-sans-font-path}_bold.#{$woff}') format("#{$woff}");
+}
+
+@font-face {
+  font-family: PublicSansRegular;
+  src: local('Public Sans Regular'),
+       local('public sans regular'),
+       local('PublicSansRegular'),
+       local('public-sans-regular'),
+       url('#{$public-sans-font-path}_regular.#{$woff2}') format("#{$woff2}"),
+       url('#{$public-sans-font-path}_regular.#{$woff}') format("#{$woff}");
+}
+
+@font-face {
+  font-family: PublicSansLight;
+  src: local('Public Sans Light'),
+       local('public sans light'),
+       local('PublicSansLight'),
+       local('public-sans-light'),
+       url('#{$public-sans-font-path}_light.#{$woff2}') format("#{$woff2}"),
+       url('#{$public-sans-font-path}_light.#{$woff}') format("#{$woff}");
+}
+
+.heading {
+  font-family: PublicSansRegular;
+  letter-spacing: 0.03em;
+  color:$darkgray;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $font-size + 14px;
+  line-height: $line-height + 17px;
+  text-shadow: .5px .5px .25px rgba(255, 255, 255, 0.6);
+}
+
+.description {
+  font-family: PublicSansRegular;
+  color: $slightly-darkgray;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $font-size;
+  line-height: $line-height;
+  margin-left: $auto;
+  margin-right: $auto;
+  max-width: 453px;
+  ;
+}
+
+
+@media (min-width: $max-width-container) {
+  .description {
+    font-size: $font-size + 2px;
+    line-height: $line-height + 3px;
+  }
+  .heading {
+  font-size: 3rem;
+  line-height: $line-height + 25px;
+  margin-bottom: .5rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit;
+  }
+}

@@ -1,12 +1,5 @@
 @import 'variables';
 
-.logo--sports--img {
-  max-width: 186px;
-  min-width: 186px;
-  min-height: 70px;
-  max-height: 70px;
-}
-
 .a11y {
   text-align: $centered;
   padding-block-end: 59px;
@@ -43,17 +36,10 @@
     padding-bottom: 10rem;
     padding-right: 8rem;
     padding-left: 8rem;
-
-
   }
-  .logo--sports--img {
-    max-width: 92px;
-    min-width: 92px;
-    min-height: 32px;
-    max-height: 32px;
-  }
+  
   .navigation {
-    max-width: 370px;
+    max-width: 390px;
     padding-block-start: 133px;
     background: unset;
   }
