@@ -10,21 +10,17 @@
   top: 30px;
   position: relative;
 }
-.navigation {
-  position: relative;
-  position: relative;
-  padding-block-start: 330px;
-  background: url(../img/image_mockups.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-position-y: -126px;
-  -o-background-size:contain;
-  -webkit-background-size:contain;
-  -moz-background-size:contain;
-  background-size: contain;
-  background-blend-mode: overlay;
 
+body > main > header {
+  background: url(../img/bg_intro_mobile.svg);
+  background-repeat: no-repeat;
+  background-position-y: -120px;
+  -o-background-size:cover;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  background-size: cover;
 }
+
 
 @media (min-width: $max-width-container) {
   .a11y {
@@ -37,10 +33,14 @@
     padding-right: 8rem;
     padding-left: 8rem;
   }
-  
-  .navigation {
-    max-width: 390px;
-    padding-block-start: 133px;
-    background: unset;
+
+  body > main > header {
+    background: url(../img/bg_intro_desktop.svg), url(../img/image_mockups.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position-x: 592px, 753px;
+    background-position-y: -220px, -100px;
+    background-size: $percentage-max-width - 15, $percentage-max-width - 50;
+    background-blend-mode: overlay;
   }
 }
+
