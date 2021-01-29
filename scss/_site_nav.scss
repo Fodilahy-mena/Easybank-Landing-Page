@@ -1,31 +1,23 @@
 body > nav {
-  padding: 1rem;
-  background-color: #f8f8f8;
   position: absolute;
+  padding: 0;
+  background-color: #f8f8f8;
   z-index: 3;
-  width: 90%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   height: auto;
-  transform: translateY(-1100);
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transform: translateY(-1100px);
   margin: auto;
-  background-color: white;
+  background: rgba(0, 0, 0, 0.25);
   transition: translate 0.3s;
-  // display: none;
-
 }
 
 body > [type="checkbox"]:checked ~ nav {
-  // transform: translateX(0);
-  flex-basis: 100%;
-  text-align: center;
-  transform: translateY(2.3rem);
-  display: block;
-  top: 18px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-  background-color: white;
-}
-
-body > [type="checkbox"]:checked ~ header label {
   position: absolute;
   z-index: 2;
   top: 0;
@@ -34,8 +26,11 @@ body > [type="checkbox"]:checked ~ header label {
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0,0,0,.25);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), transparent);
+  text-align: center;
+  transform: translateY(88px);
 }
+
 
 body > [type="checkbox"]:checked ~ main {
   z-index: 1;
@@ -50,19 +45,17 @@ body > nav > h2 {
   height: 1rem;
 }
 
-body > nav > h2 > label {
-  width: 1rem;
-  height: 1rem;
-  display: block;
-  background-image: url(../images/icons/icon_menu.svg);
-  background-size: 1rem;
-  background-repeat: no-repeat;
-}
 
 body > nav > ul {
-  list-style: none;
   display: flex;
   flex-direction: column;
+  padding: 1rem;
+  max-width: 80%;
+  margin: auto;
+  margin-top: 2rem;
+  box-shadow: 0 .5px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background-color: white;
 }
 
 body > nav > ul a {
@@ -77,9 +70,6 @@ body > nav > ul a {
   padding: 1rem;
 }
 
-body > nav .active a {
-  opacity: 1;
-}
 
 body > nav .icon {
   background-position: 1rem 50%;
@@ -89,23 +79,6 @@ body > nav > ul a:hover {
   opacity: 1;
 }
 
-#profile_link a {
-  padding-left: 1rem;
-  display: flex;
-  flex-direction: row;
-}
-
-#profile_link img {
-  width: 1rem;
-  height: 1rem;
-  margin-inline-end: 2rem;
-  vertical-align: middle;
-  border-radius: 50%;
-}
-
-#profile_link span {
-  display: block;
-}
 body > header > label {
   width: 1rem;
   height: 1rem;
@@ -116,58 +89,11 @@ body > header > label {
   text-indent: -1339px;
 }
 
-
-/* Tablet */
-@media (min-width: 1114px) {
-  body > nav {
-    padding: 0;
-    background-color: transparent;
-    top: 0;
-    left: auto;
-    right: 0;
-    bottom: auto;
-    width: auto;
-    box-shadow: none;
-    transform: none;
-    transition: none;
-    margin-right: 32rem;
-    top: 18px;
-
-  }
-
-
-  /* Switch from column to row flex */
-  body > nav > ul {
-    flex-direction: row;
-    position: relative;
-  }
-
-  body > nav > ul .icon {
-    padding: 1rem .5rem;
-    background-image: none;
-    line-height: 1.25rem;
-  }
-  body > nav > ul a {
-    padding: 0;
-  }
-  #profile_link a {
-    padding: 0.875rem;
-    opacity: 1;
-  }
-
-  #profile_link img {
-    width: 2rem;
-    height: 2rem;
-    margin-inline-end: 0;
-  }
-  body > header > label {
-    display: none;
-  }
-  #profile_link span {
-    display: none;
-  }
+.open_menu:checked ~ header > label {
+  background-image: url(../img/icon_close.svg);
+  width: 1rem;
+  height: 1rem;
 }
-
 
 .navigation {
   position: relative;
@@ -188,10 +114,53 @@ body > header > label {
 @media (min-width: $max-width-container) {
   body > nav {
     display: flex;
+    padding: 0;
+    background-color: unset;
+    top: 18px;
+    left: auto;
+    right: 0;
+    bottom: auto;
+    width: auto;
+    box-shadow: none;
+    transform: none;
+    transition: none;
+    margin-right: 40%;
   }
 
+  body > [type="checkbox"]:checked ~ nav {
+    padding: 0;
+    background-image: linear-gradient(transparent, transparent);
+    top: 18px;
+    left: auto;
+    right: 0;
+    bottom: auto;
+    width: auto;
+    height: auto;
+    box-shadow: none;
+    transform: none;
+    transition: none;
+    margin-top: 0;
+  }
+
+/* Switch from column to row flex */
   body > nav > ul {
     display: flex;
+    padding:0;
+    margin-top: 0;
+    position: relative;
+    flex-direction: row;
+    box-shadow: unset;
+    border-radius: unset;
+    background-color: unset;
+  }
+
+  body > nav > ul .icon {
+    padding: 1rem .5rem;
+    background-image: none;
+    line-height: 1.25rem;
+  }
+  body > nav > ul a {
+    padding: 0;
   }
   
   .navigation {
@@ -199,5 +168,6 @@ body > header > label {
     padding-block-start: 133px;
     background: unset;
   }
+
 }
 

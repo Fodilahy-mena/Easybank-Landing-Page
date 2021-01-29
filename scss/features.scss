@@ -50,12 +50,10 @@
   font-weight: 300;
 }
 
-.video_collection,
-.notification,
-.brand_team,
-.flag_identification,
-.new_picture,
-.league_champion {
+.online,
+.budget,
+.onboard,
+.api {
   display: block;
   text-indent: -9999px;
   background-repeat: no-repeat;
@@ -65,17 +63,21 @@
   background-position: center;
 }
 
-.video_collection {
+.online {
   background-image: url(../img/icon_online.svg);
 }
-.notification {
+.budget {
   background-image: url(../img/icon_budgeting.svg);
 }
-.brand_team {
+.onboard {
   background-image: url(../img/icon_onboarding.svg);
 }
-.flag_identification {
+.api {
   background-image: url(../img/icon_api.svg);
+}
+
+.features_info ul {
+    padding: 0;
 }
 
 
@@ -96,16 +98,11 @@
     grid-gap: 1rem;
     margin-top: 2rem;
   }
-  .features_info ul {
-    padding: 0;
-  }
 
-  .video_collection,
-.notification,
-.brand_team,
-.flag_identification,
-.new_picture,
-.league_champion {
+.online,
+.budget,
+.onboard,
+.api {
   background-position: left;
 }
 

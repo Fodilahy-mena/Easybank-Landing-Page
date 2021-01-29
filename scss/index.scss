@@ -1,8 +1,6 @@
 /* Import all the css files here */
 /* The font css file is here */
-
 @import "fonts";
-
 /* This is a link to default css */
 @import "default";
 // Link for site header
@@ -13,14 +11,9 @@
 @import 'site_nav';
 /* This is a link to masthead css */
 @import "masthead";
-
 // This is the first section 'Get sterted'
 @import 'articles';
-
 // Section features here
-
 @import 'features';
-
 // Footer link file
-
 @import 'footer';

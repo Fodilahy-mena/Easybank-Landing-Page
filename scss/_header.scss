@@ -37,10 +37,10 @@ body > main > header {
   body > main > header {
     background: url(../img/bg_intro_desktop.svg), url(../img/image_mockups.png);
     background-repeat: no-repeat, no-repeat;
-    background-position-x: 592px, 753px;
+    background-position-x: 592px, 787px;
     background-position-y: -220px, -100px;
     background-size: $percentage-max-width - 15, $percentage-max-width - 50;
-    background-blend-mode: overlay;
+    background-blend-mode: soft-light;
   }
 }
 

@@ -7,17 +7,49 @@ header h2 {
 .navigation__body {
   padding-block-start: 2rem;
 }
+
+.heading {
+  font-family: PublicSansRegular;
+  letter-spacing: 0.03em;
+  color:$darkgray;
+  font-style: normal;
+  font-weight: 700;
+  font-size: $font-size + 14px;
+  line-height: $line-height + 17px;
+  text-shadow: .5px .5px .25px rgba(255, 255, 255, 0.6);
+}
+
 .description {
+  font-family: PublicSansRegular;
+  color: $slightly-darkgray;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $font-size;
+  line-height: $line-height;
+  margin-left: $auto;
+  margin-right: $auto;
+  max-width: 453px;
   text-shadow: .4px .4px .25px rgba(255, 255, 255, 0.6);
 }
 
 @media (min-width: $max-width-container) {
-  .navigation__body {
-  justify-content: left;
-  padding-inline-start: 0;
+
+.heading {
+font-size: 3rem;
+line-height: $line-height + 25px;
+margin-bottom: .5rem;
+line-height: 1.2;
 }
+
 .description {
+  line-height: $line-height + 3px;
   text-shadow:unset;
   margin-left: 0;
 }
+
+.navigation__body {
+  justify-content: left;
+  padding-inline-start: 0;
+}
+
 }

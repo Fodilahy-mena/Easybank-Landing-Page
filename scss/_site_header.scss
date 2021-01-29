@@ -1,14 +1,11 @@
 @import 'variables';
 
-
 body > header {
-  padding: 1rem;
+  padding: 2rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-}
-body > header {
   background-color: rgb(255, 255, 255);
 }
 
@@ -26,13 +23,16 @@ body > header > p {
 body > header > ul {
   display: none;
 }
-/* Tablet */
-@media (min-width: 1114px)  {
 
-  /* Let's hide the menu icon and the profile link from the header */
-  body > header > label {
+
+@media (min-width: $max-width-container)  {
+  body > header {
+    padding: 1.25rem;
+  }
+  body > header > .icon_menu {
     display: none;
   }
+  /* Let's hide the menu icon and the profile link from the header */
   body > header > p {
     padding-right: 8rem;
     padding-left: 8rem;
@@ -43,9 +43,6 @@ body > header > ul {
     padding-right: 8rem;
     padding-left: 8rem;
 
-  }
-  body > header {
-    padding: 1.25rem;
   }
 
 }

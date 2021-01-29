@@ -12,36 +12,6 @@
   font-family: PublicSansLight;
   src: local("Public Sans Light"), local("public sans light"), local("PublicSansLight"), local("public-sans-light"), url("../fonts/public_sans_light.woff2") format("woff2"), url("../fonts/public_sans_light.woff") format("woff"); }
 
-.heading {
-  font-family: PublicSansRegular;
-  letter-spacing: 0.03em;
-  color: #333333;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 40px;
-  text-shadow: 0.5px 0.5px 0.25px rgba(255, 255, 255, 0.6); }
-
-.description {
-  font-family: PublicSansRegular;
-  color: #4F4F4F;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 23px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 453px; }
-
-@media (min-width: 1114px) {
-  .description {
-    line-height: 26px; }
-  .heading {
-    font-size: 3rem;
-    line-height: 48px;
-    margin-bottom: .5rem;
-    line-height: 1.2; } }
-
 /* This is a link to default css */
 @font-face {
   font-family: PublicSansBold;
@@ -54,36 +24,6 @@
 @font-face {
   font-family: PublicSansLight;
   src: local("Public Sans Light"), local("public sans light"), local("PublicSansLight"), local("public-sans-light"), url("../fonts/public_sans_light.woff2") format("woff2"), url("../fonts/public_sans_light.woff") format("woff"); }
-
-.heading {
-  font-family: PublicSansRegular;
-  letter-spacing: 0.03em;
-  color: #333333;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 40px;
-  text-shadow: 0.5px 0.5px 0.25px rgba(255, 255, 255, 0.6); }
-
-.description {
-  font-family: PublicSansRegular;
-  color: #4F4F4F;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 23px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 453px; }
-
-@media (min-width: 1114px) {
-  .description {
-    line-height: 26px; }
-  .heading {
-    font-size: 3rem;
-    line-height: 48px;
-    margin-bottom: .5rem;
-    line-height: 1.2; } }
 
 body {
   font-family: PublicSansRegular;
@@ -117,13 +57,11 @@ section {
   color: white; }
 
 body > header {
-  padding: 1rem;
+  padding: 2rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center; }
-
-body > header {
+  align-items: center;
   background-color: white; }
 
 body > header > label {
@@ -137,11 +75,12 @@ body > header > p {
 body > header > ul {
   display: none; }
 
-/* Tablet */
 @media (min-width: 1114px) {
-  /* Let's hide the menu icon and the profile link from the header */
-  body > header > label {
+  body > header {
+    padding: 1.25rem; }
+  body > header > .icon_menu {
     display: none; }
+  /* Let's hide the menu icon and the profile link from the header */
   body > header > p {
     padding-right: 8rem;
     padding-left: 8rem; }
@@ -149,9 +88,7 @@ body > header > ul {
     list-style: none;
     display: block;
     padding-right: 8rem;
-    padding-left: 8rem; }
-  body > header {
-    padding: 1.25rem; } }
+    padding-left: 8rem; } }
 
 /* This is a link to header css */
 .a11y {
@@ -185,35 +122,31 @@ body > main > header {
   body > main > header {
     background: url(../img/bg_intro_desktop.svg), url(../img/image_mockups.png);
     background-repeat: no-repeat, no-repeat;
-    background-position-x: 592px, 753px;
+    background-position-x: 592px, 787px;
     background-position-y: -220px, -100px;
     background-size: 85%, 50%;
-    background-blend-mode: overlay; } }
+    background-blend-mode: soft-light; } }
 
 /* This is the link of bady nav */
 body > nav {
-  padding: 1rem;
-  background-color: #f8f8f8;
   position: absolute;
+  padding: 0;
+  background-color: #f8f8f8;
   z-index: 3;
-  width: 90%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   height: auto;
-  transform: translateY(-1100);
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transform: translateY(-1100px);
   margin: auto;
-  background-color: white;
+  background: rgba(0, 0, 0, 0.25);
   transition: translate 0.3s; }
 
 body > [type="checkbox"]:checked ~ nav {
-  flex-basis: 100%;
-  text-align: center;
-  transform: translateY(2.3rem);
-  display: block;
-  top: 18px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-  background-color: white; }
-
-body > [type="checkbox"]:checked ~ header label {
   position: absolute;
   z-index: 2;
   top: 0;
@@ -222,7 +155,9 @@ body > [type="checkbox"]:checked ~ header label {
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.25); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), transparent);
+  text-align: center;
+  transform: translateY(88px); }
 
 body > [type="checkbox"]:checked ~ main {
   z-index: 1; }
@@ -235,18 +170,16 @@ body > nav > h2 {
   width: 1rem;
   height: 1rem; }
 
-body > nav > h2 > label {
-  width: 1rem;
-  height: 1rem;
-  display: block;
-  background-image: url(../images/icons/icon_menu.svg);
-  background-size: 1rem;
-  background-repeat: no-repeat; }
-
 body > nav > ul {
-  list-style: none;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  padding: 1rem;
+  max-width: 80%;
+  margin: auto;
+  margin-top: 2rem;
+  box-shadow: 0 0.5px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background-color: white; }
 
 body > nav > ul a {
   text-decoration: none;
@@ -259,29 +192,11 @@ body > nav > ul a {
   display: block;
   padding: 1rem; }
 
-body > nav .active a {
-  opacity: 1; }
-
 body > nav .icon {
   background-position: 1rem 50%; }
 
 body > nav > ul a:hover {
   opacity: 1; }
-
-#profile_link a {
-  padding-left: 1rem;
-  display: flex;
-  flex-direction: row; }
-
-#profile_link img {
-  width: 1rem;
-  height: 1rem;
-  margin-inline-end: 2rem;
-  vertical-align: middle;
-  border-radius: 50%; }
-
-#profile_link span {
-  display: block; }
 
 body > header > label {
   width: 1rem;
@@ -292,42 +207,10 @@ body > header > label {
   background-repeat: no-repeat;
   text-indent: -1339px; }
 
-/* Tablet */
-@media (min-width: 1114px) {
-  body > nav {
-    padding: 0;
-    background-color: transparent;
-    top: 0;
-    left: auto;
-    right: 0;
-    bottom: auto;
-    width: auto;
-    box-shadow: none;
-    transform: none;
-    transition: none;
-    margin-right: 32rem;
-    top: 18px; }
-  /* Switch from column to row flex */
-  body > nav > ul {
-    flex-direction: row;
-    position: relative; }
-  body > nav > ul .icon {
-    padding: 1rem .5rem;
-    background-image: none;
-    line-height: 1.25rem; }
-  body > nav > ul a {
-    padding: 0; }
-  #profile_link a {
-    padding: 0.875rem;
-    opacity: 1; }
-  #profile_link img {
-    width: 2rem;
-    height: 2rem;
-    margin-inline-end: 0; }
-  body > header > label {
-    display: none; }
-  #profile_link span {
-    display: none; } }
+.open_menu:checked ~ header > label {
+  background-image: url(../img/icon_close.svg);
+  width: 1rem;
+  height: 1rem; }
 
 .navigation {
   position: relative;
@@ -345,9 +228,47 @@ body > header > label {
 
 @media (min-width: 1114px) {
   body > nav {
-    display: flex; }
+    display: flex;
+    padding: 0;
+    background-color: unset;
+    top: 18px;
+    left: auto;
+    right: 0;
+    bottom: auto;
+    width: auto;
+    box-shadow: none;
+    transform: none;
+    transition: none;
+    margin-right: 40%; }
+  body > [type="checkbox"]:checked ~ nav {
+    padding: 0;
+    background-image: linear-gradient(transparent, transparent);
+    top: 18px;
+    left: auto;
+    right: 0;
+    bottom: auto;
+    width: auto;
+    height: auto;
+    box-shadow: none;
+    transform: none;
+    transition: none;
+    margin-top: 0; }
+  /* Switch from column to row flex */
   body > nav > ul {
-    display: flex; }
+    display: flex;
+    padding: 0;
+    margin-top: 0;
+    position: relative;
+    flex-direction: row;
+    box-shadow: unset;
+    border-radius: unset;
+    background-color: unset; }
+  body > nav > ul .icon {
+    padding: 1rem .5rem;
+    background-image: none;
+    line-height: 1.25rem; }
+  body > nav > ul a {
+    padding: 0; }
   .navigation {
     max-width: 445px;
     padding-block-start: 133px;
@@ -360,29 +281,6 @@ header h2 {
 
 .navigation__body {
   padding-block-start: 2rem; }
-
-.description {
-  text-shadow: 0.4px 0.4px 0.25px rgba(255, 255, 255, 0.6); }
-
-@media (min-width: 1114px) {
-  .navigation__body {
-    justify-content: left;
-    padding-inline-start: 0; }
-  .description {
-    text-shadow: unset;
-    margin-left: 0; } }
-
-@font-face {
-  font-family: PublicSansBold;
-  src: local("Public Sans Bold"), local("public sans bold"), local("PublicSansBold"), local("public-sans-bold"), url("../fonts/public_sans_bold.woff2") format("woff2"), url("../fonts/public_sans_bold.woff") format("woff"); }
-
-@font-face {
-  font-family: PublicSansRegular;
-  src: local("Public Sans Regular"), local("public sans regular"), local("PublicSansRegular"), local("public-sans-regular"), url("../fonts/public_sans_regular.woff2") format("woff2"), url("../fonts/public_sans_regular.woff") format("woff"); }
-
-@font-face {
-  font-family: PublicSansLight;
-  src: local("Public Sans Light"), local("public sans light"), local("PublicSansLight"), local("public-sans-light"), url("../fonts/public_sans_light.woff2") format("woff2"), url("../fonts/public_sans_light.woff") format("woff"); }
 
 .heading {
   font-family: PublicSansRegular;
@@ -403,16 +301,34 @@ header h2 {
   line-height: 23px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 453px; }
+  max-width: 453px;
+  text-shadow: 0.4px 0.4px 0.25px rgba(255, 255, 255, 0.6); }
 
 @media (min-width: 1114px) {
-  .description {
-    line-height: 26px; }
   .heading {
     font-size: 3rem;
     line-height: 48px;
     margin-bottom: .5rem;
-    line-height: 1.2; } }
+    line-height: 1.2; }
+  .description {
+    line-height: 26px;
+    text-shadow: unset;
+    margin-left: 0; }
+  .navigation__body {
+    justify-content: left;
+    padding-inline-start: 0; } }
+
+@font-face {
+  font-family: PublicSansBold;
+  src: local("Public Sans Bold"), local("public sans bold"), local("PublicSansBold"), local("public-sans-bold"), url("../fonts/public_sans_bold.woff2") format("woff2"), url("../fonts/public_sans_bold.woff") format("woff"); }
+
+@font-face {
+  font-family: PublicSansRegular;
+  src: local("Public Sans Regular"), local("public sans regular"), local("PublicSansRegular"), local("public-sans-regular"), url("../fonts/public_sans_regular.woff2") format("woff2"), url("../fonts/public_sans_regular.woff") format("woff"); }
+
+@font-face {
+  font-family: PublicSansLight;
+  src: local("Public Sans Light"), local("public sans light"), local("PublicSansLight"), local("public-sans-light"), url("../fonts/public_sans_light.woff2") format("woff2"), url("../fonts/public_sans_light.woff") format("woff"); }
 
 .section_articles {
   padding-block-start: 50px;
@@ -553,12 +469,10 @@ header h2 {
   font-size: 18px;
   font-weight: 300; }
 
-.video_collection,
-.notification,
-.brand_team,
-.flag_identification,
-.new_picture,
-.league_champion {
+.online,
+.budget,
+.onboard,
+.api {
   display: block;
   text-indent: -9999px;
   background-repeat: no-repeat;
@@ -567,17 +481,20 @@ header h2 {
   height: auto;
   background-position: center; }
 
-.video_collection {
+.online {
   background-image: url(../img/icon_online.svg); }
 
-.notification {
+.budget {
   background-image: url(../img/icon_budgeting.svg); }
 
-.brand_team {
+.onboard {
   background-image: url(../img/icon_onboarding.svg); }
 
-.flag_identification {
+.api {
   background-image: url(../img/icon_api.svg); }
+
+.features_info ul {
+  padding: 0; }
 
 @media (min-width: 1114px) {
   .section_features {
@@ -592,14 +509,10 @@ header h2 {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;
     margin-top: 2rem; }
-  .features_info ul {
-    padding: 0; }
-  .video_collection,
-  .notification,
-  .brand_team,
-  .flag_identification,
-  .new_picture,
-  .league_champion {
+  .online,
+  .budget,
+  .onboard,
+  .api {
     background-position: left; } }
 
 footer {
@@ -609,10 +522,10 @@ footer {
 footer > div {
   text-align: center; }
 
-footer h2 {
+footer h2 > a {
   background-image: url(../img/logo_white.svg);
   display: block;
-  text-indent: -999px;
+  text-indent: -9999px;
   background-repeat: no-repeat;
   background-size: contain;
   margin-left: auto;
@@ -698,6 +611,8 @@ footer .icon {
     grid-row: 1 / 3; }
   footer h2 {
     margin: 0; }
+  footer h2 > a {
+    margin-left: 0; }
   .icons {
     margin-left: 0;
     margin-bottom: 0;
